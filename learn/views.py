@@ -3,10 +3,11 @@
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return HttpResponse(u'欢迎光临')
+    return render(request,'home.html')
 
 def add(request):
     a = request.GET.get('a',0)
