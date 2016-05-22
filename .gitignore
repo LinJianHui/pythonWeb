@@ -64,3 +64,4 @@ target/
 #eclipse pydev igonore
 .project
 .pydevproject
+.settings/
