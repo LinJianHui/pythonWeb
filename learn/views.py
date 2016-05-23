@@ -7,7 +7,9 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request,'home.html')
+    content = u'我是内容，来自view哦'
+    mylist = ['中国','中华','强','无敌']
+    return render(request,'home.html',{'content':content,'dics':mylist})
 
 def add(request):
     a = request.GET.get('a',0)

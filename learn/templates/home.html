@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>欢迎光临首页</title>
-</head>
-<body>
-网站内容巴拉巴拉
-</body>
-</html>
+{% extends 'base.html' %}
+{%block title %}首页title{%endblock%}
+{%block content %}
+{{ content }}
+</br>
+我的字典：
+{%for dic in dics %}
+{{ dic }} 
+{% if not forloop.last %},{%endif%}
+{% endfor %}
+</br>
+获取当前网址request.path:{{request.path}}
+{%endblock%}
