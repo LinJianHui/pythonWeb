@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', learn_views.index),
     url(r'^add/$', learn_views.add),
-    url(r'^restadd/(\d+)/(\d+)', learn_views.restadd,name='restAdd')
+    url(r'^restadd/(\d+)/(\d+)', learn_views.restadd,name='restAdd'),
+    url(r'^addPerson/(\S+)/(\d+)', learn_views.addPerson),
 ]
