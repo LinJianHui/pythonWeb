@@ -10,7 +10,7 @@ from learn.models import Person
 
 def index(request):
     content = u'我是内容，来自view哦'
-    mylist = Person.objects.all()
+    mylist = Person.objects.filter(name__regex='^lin')
     return render(request,'home.html',{'content':content,'dics':mylist})
 
 def add(request):
